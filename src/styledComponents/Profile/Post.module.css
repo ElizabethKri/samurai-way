@@ -1,0 +1,8 @@
+.post {
+    background-color: #bef3f3;
+}
+.post img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
