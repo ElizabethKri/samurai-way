@@ -5,7 +5,7 @@
 .app-wrapper {
   display: grid;
   margin: 0 auto;
-  width: 100wh;
+  width: 100vw;
 
   grid-template-areas:
           "h h"
@@ -16,17 +16,7 @@
   grid-gap: 10px
 }
 
-.header{
-  grid-area: h;
-  background-color: #fcdefc;
-}
 
-.nav{
-  grid-area: n;
-  background-color: beige;
-}
 
-.content{
-  grid-area: c;
-  background-color: aqua;
-}
+
+
