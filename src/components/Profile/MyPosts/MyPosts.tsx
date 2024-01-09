@@ -1,16 +1,25 @@
 import React from 'react';
 import s from "../../../styledComponents/Profile/Posts.module.css";
 import {Post} from "./Post";
+import {text} from "stream/consumers";
 
-export const MyPosts = () => {
+
+type MyPostsPropsType = {
+    post: string,
+    message: string,
+    nameButton: string,
+    text: string,
+    like: string
+}
+export const MyPosts: React.FC <MyPostsPropsType> = ({post, message, nameButton, text, like}) => {
     return (
         <div className={s.posts}>
-    <div >My post</div>
+    <div >{post}</div>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <textarea>{text}</textarea>
+                <button>{nameButton}</button>
             </div>
-            <Post message={'Hi, how are you?'}/>
+            <Post message={message} like={like}/>
         </div>
     );
 };

@@ -18,7 +18,7 @@ function App() {
             <Route path='/message' component={Dialogs}/>
             <Route path='/profile' component={Profile}/>
             {/*<Profile/>*/}
-            <Dialogs/>
+            <Dialogs message={'Hi! How are you?'}/>
         </div>
     </div>
       </BrowserRouter>
