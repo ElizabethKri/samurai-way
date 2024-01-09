@@ -15,7 +15,7 @@ function App() {
         <Header/>
         <NavBar/>
         <div className={'app-wrapper-content'}>
-            <Route path='/message' component={Dialogs}/>
+            <Route path='/message' render={() => <Dialogs message={'Hi! What is your name?'}/>}/>
             <Route path='/profile' component={Profile}/>
             {/*<Profile/>*/}
             <Dialogs message={'Hi! How are you?'}/>
