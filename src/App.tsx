@@ -4,8 +4,9 @@ import {Header} from "./components/Header/Header";
 import {NavBar} from "./components/Navbar/NavBar";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
-import s from "./styledComponents/Dialogs/Dialogs.module.css";
 import {BrowserRouter, Route} from "react-router-dom";
+
+
 
 
 function App() {
@@ -15,10 +16,25 @@ function App() {
         <Header/>
         <NavBar/>
         <div className={'app-wrapper-content'}>
-            <Route path='/message' render={() => <Dialogs message={'Hi! What is your name?'}/>}/>
+            <Route path='/message' component={Dialogs}/>
+                {/*    component={state.dialogsPage.dialogs.map(el => {*/}
+                {/*    return (*/}
+                {/*        <Dialogs*/}
+                {/*            key = {el.id}*/}
+                {/*            name={el.name}*/}
+                {/*            id={el.id}*/}
+                {/*        />*/}
+                {/*    )*/}
+                {/*}}*/}
+
             <Route path='/profile' component={Profile}/>
+            <Route path='/new' />
+            <Route path='/music'/>
+            <Route path='/settings'/>
             {/*<Profile/>*/}
-            <Dialogs message={'Hi! How are you?'}/>
+            <div>
+
+            </div>
         </div>
     </div>
       </BrowserRouter>

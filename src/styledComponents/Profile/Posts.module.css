@@ -1,3 +1,11 @@
 .posts {
     background-color: #bef3f3;
 }
+
+.postsBlock {
+    padding: 10px;
+}
+
+.postsMessage {
+    margin-top: 10px;
+}

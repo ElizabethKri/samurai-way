@@ -3,7 +3,7 @@ import s from "../../../styledComponents/Profile/Post.module.css";
 
 type PostPropsType = {
     message: string,
-    like: string
+    like: number
 }
 
 export const Post: React.FC <PostPropsType> = ({message, like}) => {

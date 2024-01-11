@@ -9,17 +9,17 @@ type MyPostsPropsType = {
     message: string,
     nameButton: string,
     text: string,
-    like: string
+    like: number
 }
 export const MyPosts: React.FC <MyPostsPropsType> = ({post, message, nameButton, text, like}) => {
     return (
         <div className={s.posts}>
-    <div >{post}</div>
+    <div className={s.postsBlock}><h3>{post}</h3></div>
             <div>
-                <textarea>{text}</textarea>
-                <button>{nameButton}</button>
+                <div><textarea>{text}</textarea></div>
+                <div><button>{nameButton}</button></div>
             </div>
-            <Post message={message} like={like}/>
+            <div className={s.postsMessage}><Post message={message} like={like}/></div>
         </div>
     );
 };
